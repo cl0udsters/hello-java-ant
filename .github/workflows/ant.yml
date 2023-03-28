@@ -23,4 +23,15 @@ jobs:
         distribution: 'temurin'
     - name: Build with Ant
       run: ant -noinput -buildfile build.xml
+      
+    - name: Build Docker Image
+        id: buildAndPushImage
+        uses: abhishek-070/docker-image-build-push-action@v1.0
+        with:
+          registry_url: 'docker.io'
+          repository_name: 'demo-app'
+          user_name: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+          image_version: 'v1.0'
+          docker_file: '.'
 # Commit
