@@ -12,4 +12,4 @@ Compiling Hello-Java Using Ant in Jenkins
 export JAVA_HOME='/usr/lib/jvm/java-1.8.0-openjdk/'
 ant compile jar run
 ```
-# THis is a new file comment
+# This is a new file comment.
